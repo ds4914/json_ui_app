@@ -3,28 +3,35 @@
 ## Project Setup Instructions
 
 ### Prerequisites
+
 - Flutter SDK (Latest Stable Version)
 - Dart SDK
 - Firebase Project (for Authentication and Database)
 - Android Studio or VS Code (for development)
 
 ### Step 1: Clone the Repository
+
 ```sh
-git clone https://github.com/your-repo/jsonuiapp.git
+git clone https://github.com/ds4914/json_ui_app.git
 cd jsonuiapp
 ```
 
 ### Step 2: Install Dependencies
+
 ```sh
 flutter pub get
 ```
+
 ### Step 3: Run the Application
+
 #### Android
+
 ```sh
 flutter run
 ```
 
 #### iOS
+
 ```sh
 cd ios
 pod install
@@ -32,8 +39,8 @@ cd ..
 flutter run
 ```
 
-
 ### Project Structure
+
 ```
 jsonuiapp/
 |-- lib/
@@ -49,6 +56,7 @@ jsonuiapp/
 ```
 
 ### Key Features
+
 - Dynamic UI Rendering from JSON
 - Firebase Authentication (Google, Apple, OTP, Email/Password)
 - Cloudinary Integration for media storage
@@ -57,6 +65,7 @@ jsonuiapp/
 - Bloc State Management
 
 ### Troubleshooting
+
 1. **App crashes on startup?**
     - Ensure `google-services.json` and `GoogleService-Info.plist` are properly placed.
     - Run `flutter clean && flutter pub get`.
@@ -70,6 +79,7 @@ jsonuiapp/
     - Use async bulk upload methods.
 
 ### Contribution Guidelines
+
 - Fork the repository.
 - Create a feature branch.
 - Commit your changes with descriptive messages.
