@@ -1,0 +1,281 @@
+{
+  "theme": {
+    "dark_mode": false,
+    "primary_color": "#FF5733",
+    "text_color": "#000000",
+    "background_color": "#FFFFFF",
+    "button_color": "#FF5733",
+    "button_text_color": "#FFFFFF",
+    "font_family": "Roboto"
+  },
+  "screens": [
+    {
+      "name": "login",
+      "widgets": [
+        {
+          "type": "text",
+          "value": "Welcome!",
+          "size": 24
+        },
+        {
+          "type": "textfield",
+          "hint": "Enter email",
+          "controller": "email"
+        },
+        {
+          "type": "textfield",
+          "hint": "Enter password",
+          "obscure": true,
+          "controller": "password"
+        },
+        {
+          "type": "button",
+          "text": "Login",
+          "action": "firebase_login",
+          "width": "full"
+        },
+        {
+          "type": "button",
+          "text": "Google Login",
+          "action": "google_auth",
+          "width": "full",
+          "color": "#4285F4"
+        },
+        {
+          "type": "button",
+          "text": "Apple Login",
+          "action": "apple_auth",
+          "width": "full",
+          "color": "#000000"
+        },
+        {
+          "type": "button",
+          "text": "Login with OTP",
+          "action": "otp_login",
+          "target": "otp_screen",
+          "width": "full",
+          "color": "#4CAF50"
+        },
+        {
+          "type": "button",
+          "text": "Sign Up",
+          "action": "navigate",
+          "target": "signup",
+          "width": "full",
+          "color": "#FF9800"
+        }
+      ]
+    },
+    {
+      "name": "signup",
+      "widgets": [
+        {
+          "type": "text",
+          "value": "Create Account",
+          "size": 24
+        },
+        {
+          "type": "textfield",
+          "hint": "Full Name",
+          "controller": "name"
+        },
+        {
+          "type": "textfield",
+          "hint": "Email",
+          "controller": "email"
+        },
+        {
+          "type": "textfield",
+          "hint": "Password",
+          "obscure": true,
+          "controller": "password"
+        },
+        {
+          "type": "button",
+          "text": "Sign Up",
+          "action": "firebase_signup"
+        },
+        {
+          "type": "button",
+          "text": "Back",
+          "action": "back",
+          "target": "login"
+        }
+      ]
+    },
+    {
+      "name": "dashboard",
+      "widgets": [
+        {
+          "type": "list",
+          "title": "Categories",
+          "items": [
+            {
+              "title": "Technology",
+              "subtitle": "Latest trends in tech",
+              "icon": "computer"
+            },
+            {
+              "title": "Health",
+              "subtitle": "Tips for a healthy life",
+              "icon": "favorite"
+            },
+            {
+              "title": "Business",
+              "subtitle": "Market insights",
+              "icon": "business"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "url": "https://www.shutterstock.com/image-vector/investment-banner-web-icon-business-260nw-1428719546.jpg",
+          "height": 200,
+          "width": "full",
+          "fit": "cover"
+        },
+        {
+          "type": "text",
+          "value": "Welcome to the Dashboard!",
+          "size": 20,
+          "alignment": "center",
+          "weight": "bold"
+        },
+        {
+          "type": "list",
+          "title": "Recent Items",
+          "items": [
+            {
+              "title": "Item 1",
+              "subtitle": "Description for Item 1",
+              "icon": "star"
+            },
+            {
+              "title": "Item 2",
+              "subtitle": "Description for Item 2",
+              "icon": "favorite"
+            },
+            {
+              "title": "Item 3",
+              "subtitle": "Description for Item 3",
+              "icon": "check_circle"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Quick Actions",
+          "widgets": [
+            {
+              "type": "button",
+              "text": "Upload File",
+              "action": "navigate",
+              "target": "upload_screen"
+            },
+            {
+              "type": "button",
+              "text": "View Reports",
+              "action": "navigate",
+              "target": "reports_screen"
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "text": "Logout",
+          "action": "firebase_logout"
+        }
+      ],
+      "bottom_nav": [
+        {
+          "title": "Home",
+          "icon": "home",
+          "screen": "dashboard"
+        },
+        {
+          "title": "Profile",
+          "icon": "person",
+          "screen": "profile_screen"
+        },
+        {
+          "title": "Settings",
+          "icon": "settings",
+          "screen": "settings_screen"
+        }
+      ]
+    },
+    {
+      "name": "profile_screen",
+      "widgets": [
+        {
+          "type": "image",
+          "src": "assets/images/user.png"
+        },
+        {
+          "type": "text",
+          "value": "User Profile",
+          "size": 24
+        },
+        {
+          "type": "textfield",
+          "hint": "Update Name"
+        },
+        {
+          "type": "button",
+          "text": "Save",
+          "action": "update_profile"
+        },
+        {
+          "type": "button",
+          "text": "Back",
+          "action": "back",
+          "target": "dashboard"
+        }
+      ]
+    },
+    {
+      "name": "settings_screen",
+      "widgets": [
+        {
+          "type": "text",
+          "value": "Settings",
+          "size": 24
+        },
+        {
+          "type": "toggle",
+          "text": "Enable Dark Mode",
+          "action": "toggle_theme"
+        },
+        {
+          "type": "button",
+          "text": "Logout",
+          "action": "firebase_logout"
+        },
+        {
+          "type": "button",
+          "text": "Back",
+          "action": "back",
+          "target": "dashboard"
+        }
+      ]
+    },
+    {
+      "name": "otp_screen",
+      "widgets": [
+        {
+          "type": "textfield",
+          "hint": "Enter Mobile number"
+        },
+        {
+          "type": "textfield",
+          "hint": "Enter OTP"
+        },
+        {
+          "type": "button",
+          "text": "Verify OTP",
+          "action": "verify_otp"
+        }
+      ]
+    }
+  ]
+}

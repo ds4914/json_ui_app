@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "957006696408",
+    "project_id": "jsonuiapp",
+    "storage_bucket": "jsonuiapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957006696408:android:322f1723338e92048aacad",
+        "android_client_info": {
+          "package_name": "com.example.jsonuiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957006696408-6j9dirlp7qmil89euns1i9fd88ag1epg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jsonuiapp",
+            "certificate_hash": "a4dc96f407646c4587f1ab33a6adf803be3634a6"
+          }
+        },
+        {
+          "client_id": "957006696408-qk31406ojsstfsvrdeiepd4k02segfks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtOC00KqmjkEukamFshqgs81LV1ncs3CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957006696408-qk31406ojsstfsvrdeiepd4k02segfks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
